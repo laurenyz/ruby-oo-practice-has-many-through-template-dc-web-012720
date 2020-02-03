@@ -12,6 +12,10 @@ class Magazine
     def self.all
         @@all
     end
-
+    def subscriptions
+        Subscription.all.select do |sub_obj|
+            sub_obj.magazine == self
+        end   
+    end
   
 end
