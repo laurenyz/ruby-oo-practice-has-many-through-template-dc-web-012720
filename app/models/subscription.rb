@@ -14,4 +14,6 @@ class Subscription
         @@all
     end 
 
+    
+
 end

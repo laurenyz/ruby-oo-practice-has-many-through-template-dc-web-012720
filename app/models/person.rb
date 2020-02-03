@@ -32,4 +32,18 @@ class Person
             mag_obj.price
         end
     end
+
+    def start_dates
+        self.subscriptions.map do |sub_obj|
+            sub_obj.start_date
+        end
+    end
+
+    def expiration_year
+        self.start_dates.each do |dates|
+            dates.year + 1
+        end
+
+        
+    end
 end
